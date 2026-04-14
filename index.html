@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet">
     
     <style>
         body {
             background-color: #fffaf0; 
             color: #5d4037; 
-            font-family: 'Kiwi Maru', serif; 
+            font-family: 'Yusei Magic', sans-serif; 
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -17,32 +17,64 @@
             text-align: center;
         }
 
+        /* The Happy Hum: A gentle, rhythmic sway */
+        @keyframes happyHum {
+            0%, 100% { transform: translateY(0) rotate(-1.5deg); }
+            50% { transform: translateY(-10px) rotate(1.5deg); }
+        }
+
+        .logo-container {
+            animation: happyHum 4s ease-in-out infinite;
+            display: inline-block;
+            cursor: default;
+        }
+
         h1 {
             font-size: 7rem;
             margin-bottom: 0;
             color: #ff8a80; 
-            line-height: 1.1;
-            font-weight: 500; /* Makes it look nice and bold */
+            line-height: 1;
+        }
+
+        /* Styling the 'a' with a custom hand-drawn line above it */
+        .macron-container {
+            display: inline-block;
+            position: relative;
+        }
+
+        .macron-line {
+            position: absolute;
+            top: 15%;
+            left: 10%;
+            width: 80%;
+            height: 6px;
+            background-color: #ff8a80; /* Matches the font color */
+            border-radius: 3px;
         }
 
         .subtitle {
             font-size: 2.2rem;
-            margin-top: -5px; 
+            margin-top: 5px; 
             color: #bc8f8f; 
-            letter-spacing: 4px;
-            opacity: 0.8;
+            letter-spacing: 6px;
+            text-transform: lowercase;
         }
 
         p {
-            font-size: 1.8rem;
-            margin-top: 30px;
+            font-size: 1.6rem;
+            margin-top: 40px;
+            opacity: 0.7;
         }
     </style>
 </head>
 <body>
 
-    <h1>Obā日間 inn</h1>
-    <div class="subtitle">obahima inn</div>
+    <div class="logo-container">
+        <h1>
+            Ob<span class="macron-container"><span class="macron-line"></span>a</span>日間
+        </h1>
+        <div class="subtitle">obahima inn</div>
+    </div>
 
     <p>Still under construction...</p>
     <p>See you in the future! ✨</p>
